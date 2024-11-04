@@ -1,1 +1,39 @@
-node_modules/
+# Node.js dependencies
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js build output
+.next
+out
+
+# Next.js static exports
+out/
+
+# Production
+*.cache
+
+# VSCode settings
+.vscode/
+
+# MacOS and Linux system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
