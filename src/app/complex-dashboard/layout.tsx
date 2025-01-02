@@ -1,17 +1,22 @@
 // 使用Parallel Routes，Users, Revenue, Notifications 三元件不必使用傳統的方始引入，而是透過 props 的方式傳入給 layout.tsx
 
+import React from 'react';
+
 export default function DashboardLayout({
   children,
   users,
   revenue,
   notifications,
+  login,
 }: {
   children: React.ReactNode;
   users: React.ReactNode;
   revenue: React.ReactNode;
   notifications: React.ReactNode;
+  login: React.ReactNode;
 }) {
-  return (
+  const isLoggedIn = false;
+  return isLoggedIn ? (
     <>
       {/* 這個children component 等同於complex-dashboard/@children/page.tsx  */}
       <div>{children}</div>
@@ -23,5 +28,7 @@ export default function DashboardLayout({
         <div style={{ display: 'flex', flex: 1 }}>{notifications}</div>
       </div>
     </>
+  ) : (
+    <div>{login}</div>
   );
 }
