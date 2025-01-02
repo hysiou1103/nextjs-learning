@@ -1,5 +1,5 @@
 'use client';
-/// 這個 error boundary component 才能 handle [productId]/layout.tsx 的 error
+//  錯誤邊界不會處理來自同一區段中 layout.tsx 元件的錯誤，因此這個 error boundary component 不能 handle [productId]/layout.tsx 的 error
 
 export default function ErrorBoundary({
   error,
